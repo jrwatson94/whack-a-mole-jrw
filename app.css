@@ -1,0 +1,27 @@
+.mole-img{
+    height: 5rem;
+    width: 5rem;
+    margin-top: 1rem;
+}
+.col-4 {
+    border: 1px solid black;
+    height: 8rem;
+    background-color: lightgreen;
+
+}
+.game-div:hover{
+    cursor: url(https://image.flaticon.com/icons/png/128/4020/4020115.png) 85 35, auto;
+}
+.game-board {
+    max-width: 525px;
+    margin: auto;
+}
+.score-board{
+    margin-right: 25rem;
+}
+.start{
+    margin: 2rem;
+}
+
+
+
