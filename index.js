@@ -1,6 +1,25 @@
 let globalScore = 0;
 const scoreDisplay = document.querySelector('.score')
 scoreDisplay.innerText = `Score: ${globalScore}`
+const banner = document.querySelector('.banner')
+const scoreSpan = document.querySelector('.score-span')
+
+
+let timeRemaining = 5
+let timeDisplay = document.querySelector('.timer')
+
+const countDown = (gameFunction) => {
+    const timer = setInterval(()=> {
+        if (timeRemaining > 0){
+            timeRemaining--
+            timeDisplay.innerText= `Time Remaining: ${timeRemaining}`
+        }else{
+            clearInterval(gameFunction)
+            clearInterval(timer)
+            endGame()
+        }
+    }, 1000)
+}
 
 const playGame = () => {
     const moles = document.querySelectorAll('.mole-img')
@@ -10,13 +29,28 @@ const playGame = () => {
         count ++
     })
     
-    setInterval(() => {
+    const molesAppear = setInterval(() => {
         moles.forEach((mole) => {
             mole.style.visibility = 'hidden'
         })
         let randomMole = moles[Math.floor(Math.random() * 9)]
         randomMole.style.visibility = 'visible'
-    }, (Math.random() + .2)*900)
+    }, (Math.random() + .15)*900)
+
+    countDown(molesAppear)
+}
+
+const endGame = () => {
+    timeRemaining = 5;
+    const moles = document.querySelectorAll('.mole-img')
+    scoreSpan.innerText = `${globalScore} points.`
+    banner.innerText = `Game Over! You Scored `
+    
+    globalScore = 0;
+    scoreDisplay.innerText = `Score: ${globalScore}`
+    moles.forEach((mole) => {
+        mole.style.visibility = 'hidden'
+    })
 }
 
 const renderBoard = () => {
@@ -44,6 +78,8 @@ const renderBoard = () => {
 const addStartButtonListener = () => {
     const startButton = document.querySelector('.start')
     startButton.addEventListener('click', () => {
+        banner.innerText=''
+        scoreSpan.innerText=''
         playGame()
     })
 }

@@ -1,26 +1,63 @@
+
+.game {
+    background-color: rgba(255, 254, 240, 0.897);
+    height: 800px;
+    font-family: 'Pacifico', cursive;
+}
+.title{
+    color: blanchedalmond;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    background-color: black;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.3);
+}
+
 .mole-img{
     height: 5rem;
     width: 5rem;
     margin-top: 1rem;
 }
+.row{
+    height: 33%;
+    width: 37.4rem;
+}
 .col-4 {
     border: 1px solid black;
-    height: 8rem;
+    height: 8.5rem;
     background-color: lightgreen;
+    
 
 }
+
 .game-div:hover{
     cursor: url(https://image.flaticon.com/icons/png/128/4020/4020115.png) 85 35, auto;
 }
-.game-board {
-    max-width: 525px;
+#game-board {
+    max-width: 600px;
+    height: 400px;
     margin: auto;
+    border: 1px solid black;
+    box-shadow: 0px 2px 10px black;
+
 }
 .score-board{
     margin-right: 25rem;
+    margin-top: 3rem;
+}
+.score-span{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .start{
     margin: 2rem;
+}
+.timer{
+    margin: 1rem;
+}
+hr{
+    line-height: 3px;
+    background-color: black;
 }
 
 

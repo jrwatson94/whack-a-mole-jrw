@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Whack-A-Mole</title>
 </head>
 <body class="text-center">
-    <h1>Whack-A-Mole</h1>
-    <hr>
-    <div class="score-board">
-        <h3 class="score">Score: </h3>
-    </div>
-    <div class="game-div">
-        <div class="game-board">
+    <div class= "game">
+        <h1 class="title">Whack-A-Mole</h1>
+        <div class="banner-div">
+            <h3 class="banner"><h3 class="score-span"></h3></h3>
         </div>
+        <div class="score-board">
+            <h3 class="score">Score: </h3>
+        </div>
+        <div class="game-div">
+            <div id="game-board" class="game-board container">
+            </div>
+        </div>
+        <h3 class="timer"></h3>
+        <button class="start btn btn-primary">Start</button>
+        <hr>
     </div>
+
     
-    <button class="start btn btn-primary">Start</button>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
