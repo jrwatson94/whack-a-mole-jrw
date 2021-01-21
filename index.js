@@ -5,7 +5,7 @@ const banner = document.querySelector('.banner')
 const scoreSpan = document.querySelector('.score-span')
 
 
-let timeRemaining = 5
+let timeRemaining = 60
 let timeDisplay = document.querySelector('.timer')
 
 const countDown = (gameFunction) => {
@@ -41,7 +41,7 @@ const playGame = () => {
 }
 
 const endGame = () => {
-    timeRemaining = 5;
+    timeRemaining = 60;
     const moles = document.querySelectorAll('.mole-img')
     scoreSpan.innerText = `${globalScore} points.`
     banner.innerText = `Game Over! You Scored `
